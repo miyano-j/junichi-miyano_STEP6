@@ -24,10 +24,6 @@
 
 ?>
 
-<p>
-    <?php echo $resultMessage; ?>
-</p>
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -38,12 +34,8 @@
 <body>
     <h1>お問い合わせフォームｰ送信完了画面</h1>
 
-    <?php
-        echo "お問い合わせが送信されました。ありがとうございます！";
-    ?>
+    <p><?php echo $resultMessage; ?></p>
 
-<br>
-
-<a href="contact.php">お問い合わせフォームに戻る</a>
+    <a href="contact.php">お問い合わせフォームに戻る</a>
 </body>
 </html>

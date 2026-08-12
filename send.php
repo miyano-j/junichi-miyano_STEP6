@@ -10,16 +10,21 @@
     $age = $_POST["age"];
     $message = $_POST["message"];
 
-    if (
-        empty($_POST["name"]) ||
-        empty($_POST["companyName"]) ||
-        empty($_POST["email"]) ||
-        empty($_POST["age"]) ||
-        empty($_POST["message"])
-    ) {
-        $resultMessage = "メール送信に失敗しました。";
-    } else {
+    $to = "自分のメールアドレス";
+    $subject = "お問い合わせがありました";
+    $body =
+        "お名前:" . $name . "\n" .
+        "会社名:" . $companyName . "\n" .
+        "メールアドレス:" . $email . "\n" .
+        "年齢:" . $age . "\n" .
+        "お問い合わせ内容:" . $message;
+
+    $result = mail($to, $subject, $body);
+
+    if ($result) {
         $resultMessage = "お問い合わせが送信されました。ありがとうございます！";
+    } else {
+        $resultMessage = "メール送信に失敗しました。";
     }
 
 ?>

@@ -1,29 +1,3 @@
-<?php
-    if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-        header("Location: contact.php");
-        exit;
-    }
-    if (
-        empty($_POST["name"]) ||
-        empty($_POST["companyName"]) ||
-        empty($_POST["email"]) ||
-        empty($_POST["age"]) ||
-        empty($_POST["message"])
-    ) {
-        echo "未入力の項目があります。";
-        exit;
-    }
-
-    $name = htmlspecialchars($_POST["name"], ENT_QUOTES, "UTF-8");
-    $companyName = htmlspecialchars($_POST["companyName"], ENT_QUOTES, "UTF-8");
-    $email = htmlspecialchars($_POST["email"], ENT_QUOTES, "UTF-8");
-    $age = htmlspecialchars($_POST["age"], ENT_QUOTES, "UTF-8");
-    $message = htmlspecialchars($_POST["message"], ENT_QUOTES, "UTF-8");
-
-?>
-
-<form action="confirm.php" method="POST">
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -63,7 +37,7 @@
             </tr>
             <tr>
                 <th>年齢</th>
-                <td><input type="number" id="age" name="age" size="40"></td>
+                <td><input type="text" id="age" name="age" size="40"></td>
             </tr>
             <tr>
                 <th>お問い合わせ内容</th>

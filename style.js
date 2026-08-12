@@ -26,7 +26,14 @@ contactForm.addEventListener("submit", function (event) {
    }
 
    //確認ダイアログ
-   const result = confirm("この内容で送信しますか？");
+   const result = confirm(
+        "お名前:" + name + "\n" +
+        "会社名:" + companyName + "\n" +
+        "メールアドレス:" + email + "\n" +
+        "年齢:" + age + "\n" +
+        "お問い合わせ内容:" + message + "\n\n" +
+        "この内容で送信しますか？"
+   );
 
    //キャンセルされた場合
    if (!result) {

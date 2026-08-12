@@ -29,7 +29,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>お問い合わせフォーム</title>
+    <title>お問い合わせフォーム-確認画面</title>
     <link rel="stylesheet" href="style.css">
 </head>
 

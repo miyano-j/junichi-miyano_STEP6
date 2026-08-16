@@ -45,7 +45,7 @@
             </tr>
         </table>
 
-        <input type="submit" value="送信">
+        <input type="submit" name="submit" value="送信">
     </form>
 
     <footer id="footer">
